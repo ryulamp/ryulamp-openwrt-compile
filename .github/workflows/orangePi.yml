@@ -17,7 +17,7 @@ on:
     branches: 
       - master
   schedule:
-    - cron: 30 11,18 * * *    
+    - cron: 40 13,18 * * *    
   watch:
     types: started
 
@@ -45,9 +45,11 @@ jobs:
       - name: Download lede
         run: |
           git clone https://github.com/coolsnowwolf/lede
-          git clone https://github.com/kenzok8/openwrt-packages.git ./lede/package/openwrt-packages
-          git clone https://github.com/kenzok8/small.git ./lede/package/small
+          git clone https://github.com/kenzok8/openwrt-packages.git
+          git clone https://github.com/kenzok8/small.git
           mv ./lede/* ./
+          mv ./openwrt-packages ./package
+          mv ./small ./package
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
