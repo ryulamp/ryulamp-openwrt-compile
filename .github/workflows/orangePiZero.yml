@@ -5,11 +5,11 @@
 #
 # Copyright (C) 2020 KFERMercer
 #
-name: OpenWrt-orangePI
+name: Lede-orangePI
 
 on:
   schedule:
-    - cron: 30 5,20 * * *
+    - cron: 30 8,20 * * *
   release:
     types: [published]
 
