@@ -1837,7 +1837,7 @@ CONFIG_BUSYBOX_CONFIG_MKTEMP=y
 CONFIG_BUSYBOX_CONFIG_MV=y
 CONFIG_BUSYBOX_CONFIG_NICE=y
 # CONFIG_BUSYBOX_CONFIG_NL is not set
-# CONFIG_BUSYBOX_CONFIG_NOHUP is not set
+CONFIG_BUSYBOX_CONFIG_NOHUP=y
 # CONFIG_BUSYBOX_CONFIG_NPROC is not set
 # CONFIG_BUSYBOX_CONFIG_OD is not set
 # CONFIG_BUSYBOX_CONFIG_PASTE is not set
@@ -2577,7 +2577,7 @@ CONFIG_PACKAGE_rpcd=y
 # CONFIG_PACKAGE_snapshot-tool is not set
 # CONFIG_PACKAGE_sqm-scripts is not set
 # CONFIG_PACKAGE_sqm-scripts-extra is not set
-# CONFIG_PACKAGE_swconfig is not set
+CONFIG_PACKAGE_swconfig=y
 CONFIG_PACKAGE_ubox=y
 CONFIG_PACKAGE_ubus=y
 CONFIG_PACKAGE_ubusd=y
@@ -2954,7 +2954,7 @@ CONFIG_PACKAGE_kmod-crypto-cmac=y
 CONFIG_PACKAGE_kmod-crypto-ctr=y
 # CONFIG_PACKAGE_kmod-crypto-cts is not set
 # CONFIG_PACKAGE_kmod-crypto-deflate is not set
-CONFIG_PACKAGE_kmod-crypto-des=y
+# CONFIG_PACKAGE_kmod-crypto-des is not set
 CONFIG_PACKAGE_kmod-crypto-ecb=y
 # CONFIG_PACKAGE_kmod-crypto-ecdh is not set
 # CONFIG_PACKAGE_kmod-crypto-echainiv is not set
@@ -2969,7 +2969,7 @@ CONFIG_PACKAGE_kmod-crypto-hmac=y
 # CONFIG_PACKAGE_kmod-crypto-kpp is not set
 CONFIG_PACKAGE_kmod-crypto-manager=y
 # CONFIG_PACKAGE_kmod-crypto-md4 is not set
-CONFIG_PACKAGE_kmod-crypto-md5=y
+# CONFIG_PACKAGE_kmod-crypto-md5 is not set
 # CONFIG_PACKAGE_kmod-crypto-michael-mic is not set
 # CONFIG_PACKAGE_kmod-crypto-misc is not set
 CONFIG_PACKAGE_kmod-crypto-null=y
@@ -3543,9 +3543,10 @@ CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
 CONFIG_PACKAGE_kmod-usb-core=y
 # CONFIG_PACKAGE_kmod-usb-dwc2 is not set
 # CONFIG_PACKAGE_kmod-usb-dwc3 is not set
+CONFIG_PACKAGE_kmod-usb-ehci=y
 # CONFIG_PACKAGE_kmod-usb-hid is not set
 # CONFIG_PACKAGE_kmod-usb-hid-cp2112 is not set
-CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
+# CONFIG_PACKAGE_kmod-usb-ledtrig-usbport is not set
 # CONFIG_PACKAGE_kmod-usb-net is not set
 # CONFIG_PACKAGE_kmod-usb-net-aqc111 is not set
 # CONFIG_PACKAGE_kmod-usb-net-asix is not set
@@ -3572,7 +3573,7 @@ CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
 # CONFIG_PACKAGE_kmod-usb-net-sierrawireless is not set
 # CONFIG_PACKAGE_kmod-usb-net-smsc95xx is not set
 # CONFIG_PACKAGE_kmod-usb-net-sr9700 is not set
-# CONFIG_PACKAGE_kmod-usb-ohci is not set
+CONFIG_PACKAGE_kmod-usb-ohci=y
 # CONFIG_PACKAGE_kmod-usb-ohci-pci is not set
 # CONFIG_PACKAGE_kmod-usb-printer is not set
 # CONFIG_PACKAGE_kmod-usb-serial is not set
@@ -3602,11 +3603,10 @@ CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
 # CONFIG_PACKAGE_kmod-usb-storage-uas is not set
 # CONFIG_PACKAGE_kmod-usb-uhci is not set
 # CONFIG_PACKAGE_kmod-usb-wdm is not set
-CONFIG_PACKAGE_kmod-usb-xhci-hcd=y
 # CONFIG_PACKAGE_kmod-usb-yealink is not set
-# CONFIG_PACKAGE_kmod-usb2 is not set
+CONFIG_PACKAGE_kmod-usb2=y
 # CONFIG_PACKAGE_kmod-usb2-pci is not set
-CONFIG_PACKAGE_kmod-usb3=y
+# CONFIG_PACKAGE_kmod-usb3 is not set
 # CONFIG_PACKAGE_kmod-usbip is not set
 # CONFIG_PACKAGE_kmod-usbip-client is not set
 # CONFIG_PACKAGE_kmod-usbip-server is not set
@@ -3697,7 +3697,7 @@ CONFIG_PACKAGE_MAC80211_MESH=y
 # CONFIG_PACKAGE_kmod-mt76 is not set
 CONFIG_PACKAGE_kmod-mt76-core=y
 # CONFIG_PACKAGE_kmod-mt7601u is not set
-CONFIG_PACKAGE_kmod-mt7603=y
+# CONFIG_PACKAGE_kmod-mt7603 is not set
 # CONFIG_PACKAGE_kmod-mt7603e is not set
 # CONFIG_PACKAGE_kmod-mt7615-firmware is not set
 # CONFIG_PACKAGE_kmod-mt7615d is not set
@@ -5469,7 +5469,7 @@ CONFIG_PACKAGE_luci-app-nlbwmon=y
 # CONFIG_PACKAGE_luci-app-openvpn-server is not set
 # CONFIG_PACKAGE_luci-app-p910nd is not set
 # CONFIG_PACKAGE_luci-app-pagekitec is not set
-CONFIG_PACKAGE_luci-app-passwall=y
+# CONFIG_PACKAGE_luci-app-passwall is not set
 
 #
 # Configuration
@@ -5490,7 +5490,7 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Simple_Obfs=y
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO is not set
 CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_Plus=y
 # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray_Plugin is not set
-CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray=y
+# CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Xray is not set
 # end of Configuration
 
 # CONFIG_PACKAGE_luci-app-polipo is not set
@@ -5581,17 +5581,17 @@ CONFIG_PACKAGE_luci-app-zerotier=y
 #
 # 4. Themes
 #
-CONFIG_PACKAGE_luci-theme-argon=y
-CONFIG_PACKAGE_luci-theme-argon_new=y
-CONFIG_PACKAGE_luci-theme-atmaterial=y
+# CONFIG_PACKAGE_luci-theme-argon is not set
+# CONFIG_PACKAGE_luci-theme-argon_new is not set
+# CONFIG_PACKAGE_luci-theme-atmaterial is not set
 CONFIG_PACKAGE_luci-theme-bootstrap=y
-CONFIG_PACKAGE_luci-theme-edge=y
-CONFIG_PACKAGE_luci-theme-ifit=y
-CONFIG_PACKAGE_luci-theme-material=y
-CONFIG_PACKAGE_luci-theme-netgear=y
-CONFIG_PACKAGE_luci-theme-opentomato=y
-CONFIG_PACKAGE_luci-theme-opentomcat=y
-CONFIG_PACKAGE_luci-theme-opentopd=y
+# CONFIG_PACKAGE_luci-theme-edge is not set
+# CONFIG_PACKAGE_luci-theme-ifit is not set
+# CONFIG_PACKAGE_luci-theme-material is not set
+# CONFIG_PACKAGE_luci-theme-netgear is not set
+# CONFIG_PACKAGE_luci-theme-opentomato is not set
+# CONFIG_PACKAGE_luci-theme-opentomcat is not set
+# CONFIG_PACKAGE_luci-theme-opentopd is not set
 # end of 4. Themes
 
 #
@@ -5720,8 +5720,6 @@ CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-nlbwmon-ja is not set
 # CONFIG_PACKAGE_luci-i18n-nlbwmon-ru is not set
 CONFIG_PACKAGE_luci-i18n-nlbwmon-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-passwall-zh_Hans is not set
 CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-ssr-plus-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-ssr-plus-zh_Hans is not set
@@ -6339,15 +6337,15 @@ CONFIG_PACKAGE_ip-full=y
 # SSH
 #
 # CONFIG_PACKAGE_autossh is not set
-CONFIG_PACKAGE_openssh-client=y
-CONFIG_PACKAGE_openssh-client-utils=y
-CONFIG_PACKAGE_openssh-keygen=y
+# CONFIG_PACKAGE_openssh-client is not set
+# CONFIG_PACKAGE_openssh-client-utils is not set
+# CONFIG_PACKAGE_openssh-keygen is not set
 # CONFIG_PACKAGE_openssh-moduli is not set
 # CONFIG_PACKAGE_openssh-server is not set
 # CONFIG_PACKAGE_openssh-server-pam is not set
 # CONFIG_PACKAGE_openssh-sftp-avahi-service is not set
 # CONFIG_PACKAGE_openssh-sftp-client is not set
-CONFIG_PACKAGE_openssh-sftp-server=y
+# CONFIG_PACKAGE_openssh-sftp-server is not set
 # CONFIG_PACKAGE_sshtunnel is not set
 # CONFIG_PACKAGE_tmate is not set
 # end of SSH
@@ -6885,15 +6883,8 @@ CONFIG_PACKAGE_ppp-mod-pppoe=y
 # CONFIG_PACKAGE_seafile-server-fuse is not set
 # CONFIG_PACKAGE_ser2net is not set
 # CONFIG_PACKAGE_simple-adblock is not set
-CONFIG_PACKAGE_simple-obfs=y
+# CONFIG_PACKAGE_simple-obfs is not set
 # CONFIG_PACKAGE_simple-obfs-server is not set
-
-#
-# Simple-obfs Compile Configuration
-#
-# CONFIG_SIMPLE_OBFS_STATIC_LINK is not set
-# end of Simple-obfs Compile Configuration
-
 # CONFIG_PACKAGE_smartdns is not set
 # CONFIG_PACKAGE_smbinfo is not set
 # CONFIG_PACKAGE_snmp-mibs is not set
@@ -6925,7 +6916,7 @@ CONFIG_PACKAGE_tcping=y
 # CONFIG_PACKAGE_trafficshaper is not set
 # CONFIG_PACKAGE_travelmate is not set
 CONFIG_PACKAGE_trojan=y
-CONFIG_PACKAGE_trojan-plus=y
+# CONFIG_PACKAGE_trojan-plus is not set
 # CONFIG_PACKAGE_u2pnpd is not set
 # CONFIG_PACKAGE_uacme is not set
 CONFIG_PACKAGE_uclient-fetch=y
@@ -6962,7 +6953,7 @@ CONFIG_XRAY_CORE_COMPRESS_UPX=y
 # end of Xray-core Configuration
 
 # CONFIG_PACKAGE_xray-example is not set
-CONFIG_PACKAGE_xray-geodata=y
+# CONFIG_PACKAGE_xray-geodata is not set
 # CONFIG_PACKAGE_xray-plugin is not set
 # CONFIG_XRAY_PLUGIN_PROVIDE_V2RAY_PLUGIN is not set
 # CONFIG_XRAY_PLUGIN_COMPRESS_GOPROXY is not set
@@ -7033,7 +7024,7 @@ CONFIG_XRAY_PLUGIN_COMPRESS_UPX=y
 # Boot Loaders
 #
 # CONFIG_PACKAGE_fconfig is not set
-CONFIG_PACKAGE_uboot-envtools=y
+# CONFIG_PACKAGE_uboot-envtools is not set
 # end of Boot Loaders
 
 #
@@ -7046,7 +7037,7 @@ CONFIG_PACKAGE_uboot-envtools=y
 # CONFIG_PACKAGE_lz4 is not set
 # CONFIG_PACKAGE_pigz is not set
 # CONFIG_PACKAGE_unrar is not set
-CONFIG_PACKAGE_unzip=y
+# CONFIG_PACKAGE_unzip is not set
 # CONFIG_PACKAGE_xz-utils is not set
 # CONFIG_PACKAGE_zipcmp is not set
 # CONFIG_PACKAGE_zipmerge is not set
@@ -7420,7 +7411,7 @@ CONFIG_PACKAGE_coreutils-base64=y
 # CONFIG_PACKAGE_coreutils-mv is not set
 # CONFIG_PACKAGE_coreutils-nice is not set
 # CONFIG_PACKAGE_coreutils-nl is not set
-CONFIG_PACKAGE_coreutils-nohup=y
+# CONFIG_PACKAGE_coreutils-nohup is not set
 # CONFIG_PACKAGE_coreutils-nproc is not set
 # CONFIG_PACKAGE_coreutils-numfmt is not set
 # CONFIG_PACKAGE_coreutils-od is not set
