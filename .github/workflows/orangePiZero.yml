@@ -9,7 +9,7 @@ name: OpenWrt-orangePiZero
 
 on:
   schedule:
-    - cron: 33 1 * * *
+    - cron: 10 2 * * *
   release:
     types: [published]
 
