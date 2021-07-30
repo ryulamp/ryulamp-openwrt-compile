@@ -9,7 +9,7 @@ name: OpenWrt-x64-lede
 
 on:
   schedule:
-    - cron: 25 14,20 * * *
+    - cron: 0 16 * * *
   release:
     types: [published]
 
