@@ -9,7 +9,7 @@ name: OpenWrt-AC9
 
 on:
   schedule:
-    - cron: 10 8 * * *
+    - cron: 26 8 * * *
   release:
     types: [published]
 
