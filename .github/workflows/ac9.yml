@@ -45,6 +45,7 @@ jobs:
           git clone https://github.com/openwrt/openwrt.git
           mv ./openwrt/* ./
           mv ./lede/package/lean/* ./package
+          rm -rf ./lede
       - name: Update feeds
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
