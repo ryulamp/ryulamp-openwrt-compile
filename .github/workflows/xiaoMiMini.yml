@@ -9,7 +9,7 @@ name: OpenWrt-xiaoMiMini
 
 on:
   schedule:
-    - cron: 30 3 * * *
+    - cron: 22 18 * * *
   release:
     types: [published]
 
