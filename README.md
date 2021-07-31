@@ -1,1 +1,1 @@
-# ryulamp-openwrt-orangePiZero test
+# ryulamp-openwrt-compile test
