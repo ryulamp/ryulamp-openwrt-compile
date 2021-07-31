@@ -9,7 +9,7 @@ name: OpenWrt-xiaoMi3G
 
 on:
   schedule:
-    - cron: 50 3 * * *
+    - cron: 22 18 * * *
   release:
     types: [published]
 
