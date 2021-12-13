@@ -9,7 +9,7 @@ name: OpenWrt-x64-small
 
 on:
   schedule:
-    - cron: 58 9 * * *
+    - cron: 5 16 * * *
   release:
     types: [published]
 
