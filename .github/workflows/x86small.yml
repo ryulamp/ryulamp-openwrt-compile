@@ -9,7 +9,7 @@ name: OpenWrt-x64-small
 
 on:
   schedule:
-    - cron: 22 18 * * *
+    - cron: 22 4 * * *
   release:
     types: [published]
 
@@ -42,7 +42,7 @@ jobs:
       - name: Download lede
         run: |
           git clone https://github.com/coolsnowwolf/lede
-          git clone https://github.com/kenzok8/openwrt-packages.git
+          git clone https://github.com/kenzok8/small-package.git
           git clone https://github.com/kenzok8/small.git
           mv ./lede/* ./
           mv ./openwrt-packages ./package
