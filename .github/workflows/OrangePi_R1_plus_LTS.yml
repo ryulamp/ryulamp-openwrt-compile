@@ -9,7 +9,7 @@ name: OrangePi_R1_plus_LTS
 
 on:
   schedule:
-    - cron: 10 11 * * *
+    - cron: 20 13 * * *
   release:
     types: [published]
 
@@ -43,10 +43,10 @@ jobs:
         run: |
           git clone https://github.com/orangepi-xunlong/openwrt.git
           git clone https://github.com/coolsnowwolf/lede
-          git clone https://github.com/kenzok8/small-package.git
+          git clone https://github.com/kenzok8/openwrt-packages.git
           git clone https://github.com/kenzok8/small.git
           mv ./openwrt/* ./
-          mv ./small-package ./package
+          mv ./openwrt-packages ./package
           mv ./small ./package
           mv ./lede/package/lean ./package
       - name: Update feeds
