@@ -52,6 +52,7 @@ jobs:
           cp -r openwrt/configs .
           mv ./openwrt-packages ./package
           mv ./small ./package
+          rm -rf package/lean/luci-app-dockerman
           rm -rf lede
           rm -rf openwrt
       - name: Update feeds
