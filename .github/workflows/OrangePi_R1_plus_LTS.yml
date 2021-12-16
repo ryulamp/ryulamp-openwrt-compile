@@ -93,17 +93,17 @@ jobs:
       - name: Deliver buildinfo
         uses: actions/upload-artifact@v2
         with:
-          name: OpenWrt_x86_64_buildinfo
+          name: OrangePi_R1_plus_LTS_buildinfo
           path: ./artifact/buildinfo/
 
       - name: Deliver package
         uses: actions/upload-artifact@v2
         with:
-          name: OpenWrt_x86_64_package
+          name: OrangePi_R1_plus_LTS_package
           path: ./artifact/package/
 
       - name: Deliver firmware
         uses: actions/upload-artifact@v2
         with:
-          name: OpenWrt_x86_64_firmware
+          name: OrangePi_R1_plus_LTS_firmware
           path: ./bin/targets/
