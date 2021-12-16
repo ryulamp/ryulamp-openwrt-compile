@@ -45,14 +45,14 @@ jobs:
           git clone https://github.com/kenzok8/openwrt-packages.git
           git clone https://github.com/kenzok8/small.git
           mv ./lede/* ./
-          rm -rf target/linux/rockchip
-          cp -r openwrt/target/linux/rockchip target/linux
-          rm -rf package/boot/uboot-rockchip
-          cp -r openwrt/package/boot/uboot-rockchip package/boot
-          cp -r openwrt/configs .
+          rm -rf ./target/linux/rockchip
+          cp -r ./openwrt/target/linux/rockchip ./target/linux
+          rm -rf ./package/boot/uboot-rockchip
+          cp -r ./openwrt/package/boot/uboot-rockchip ./package/boot
+          cp -r ./openwrt/configs .
           mv ./openwrt-packages ./package
           mv ./small ./package
-          rm -rf package/lean/luci-app-dockerman
+          cp -r ./openwrt/package/boot/arm-trusted-firmware-rk3328 ./package/boot
           rm -rf lede
           rm -rf openwrt
       - name: Update feeds
