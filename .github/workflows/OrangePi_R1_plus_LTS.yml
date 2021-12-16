@@ -9,7 +9,7 @@ name: OrangePi_R1_plus_LTS
 
 on:
   schedule:
-    - cron: 20 2 * * *
+    - cron: 20 7 * * *
   release:
     types: [published]
 
