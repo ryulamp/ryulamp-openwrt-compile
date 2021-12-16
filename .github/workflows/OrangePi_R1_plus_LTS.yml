@@ -52,7 +52,7 @@ jobs:
           cp -r ./openwrt/configs .
           mv ./openwrt-packages ./package
           mv ./small ./package
-          cp -r ./openwrt/package/boot/arm-trusted-firmware-rk3328 ./package/boot
+          cp -r ./openwrt/package/boot/arm-trusted-firmware-rk3328 ./package/boot          
           rm -rf lede
           rm -rf openwrt
       - name: Update feeds
@@ -60,6 +60,7 @@ jobs:
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          sed -i 's/^\s*$[(]call\sEnsureVendoredVersion/#&/' feeds/packages/utils/dockerd/Makefile
       - name: Generate configuration file
         run: |
           rm -f ./.config*
