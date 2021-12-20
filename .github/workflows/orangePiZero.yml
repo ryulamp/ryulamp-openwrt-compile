@@ -43,11 +43,44 @@ jobs:
           git clone https://github.com/coolsnowwolf/lede
           git clone https://github.com/kenzok8/openwrt-packages.git
           git clone https://github.com/kenzok8/small.git
-          # wget https://github.com/openwrt/openwrt/blob/4ce1b174fae95d84d97be6b5c549ba2d4dfdc067/target/linux/sunxi/patches-4.14/203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch
           mv ./lede/* ./
           mv ./openwrt-packages ./package
           mv ./small ./package
-          # mv ./203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch ./package/boot/uboot-sunxi/patches
+          cat << EOF > 203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch
+          --- a/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
+          +++ b/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
+          @@ -123,6 +101,14 @@
+           &ehci1 {
+            status = "okay";
+           };
+          +
+          +&ehci2 {
+          +	status = "okay";
+          +};
+          +
+          +&ehci3 {
+          +	status = "okay";
+          +};
+
+           &emac {
+            phy-handle = <&int_mii_phy>;
+          @@ -161,6 +169,14 @@
+           &ohci1 {
+                  status = "okay";
+           };
+          +
+          +&ohci2 {
+          +       status = "okay";
+          +};
+          +
+          +&ohci3 {
+          +       status = "okay";
+          +};
+
+           &spi0 {
+            /* Disable SPI NOR by default: it optional on Orange Pi Zero boards */
+          EOF	
+          mv ./203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch ./target/linux/sunxi/patches-5.4
       - name: Update feeds
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
