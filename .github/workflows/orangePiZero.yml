@@ -9,7 +9,7 @@ name: OpenWrt-orangePiZero
 
 on:
   schedule:
-    - cron: 50 3 * * *
+    - cron: 10 5 * * *
   release:
     types: [published]
 
@@ -43,11 +43,11 @@ jobs:
           git clone https://github.com/coolsnowwolf/lede
           git clone https://github.com/kenzok8/openwrt-packages.git
           git clone https://github.com/kenzok8/small.git
-          #wget https://github.com/openwrt/openwrt/blob/4ce1b174fae95d84d97be6b5c549ba2d4dfdc067/target/linux/sunxi/patches-4.14/203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch
+          # wget https://github.com/openwrt/openwrt/blob/4ce1b174fae95d84d97be6b5c549ba2d4dfdc067/target/linux/sunxi/patches-4.14/203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch
           mv ./lede/* ./
           mv ./openwrt-packages ./package
           mv ./small ./package
-          #mv ./203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch ./package/boot/uboot-sunxi/patches
+          # mv ./203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch ./package/boot/uboot-sunxi/patches
       - name: Update feeds
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
