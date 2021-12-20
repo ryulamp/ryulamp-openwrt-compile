@@ -46,40 +46,6 @@ jobs:
           mv ./lede/* ./
           mv ./openwrt-packages ./package
           mv ./small ./package
-          cat << EOF > 203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch
-          --- a/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
-          +++ b/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
-          @@ -123,6 +101,14 @@
-           &ehci1 {
-            status = "okay";
-           };
-          +
-          +&ehci2 {
-          +	status = "okay";
-          +};
-          +
-          +&ehci3 {
-          +	status = "okay";
-          +};
-
-           &emac {
-            phy-handle = <&int_mii_phy>;
-          @@ -161,6 +169,14 @@
-           &ohci1 {
-                  status = "okay";
-           };
-          +
-          +&ohci2 {
-          +       status = "okay";
-          +};
-          +
-          +&ohci3 {
-          +       status = "okay";
-          +};
-
-           &spi0 {
-            /* Disable SPI NOR by default: it optional on Orange Pi Zero boards */
-          EOF	
           mv ./203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch ./target/linux/sunxi/patches-5.4
       - name: Update feeds
         run: |
