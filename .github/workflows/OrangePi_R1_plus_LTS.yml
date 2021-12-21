@@ -52,7 +52,8 @@ jobs:
           cp -r ./openwrt/configs .
           mv ./openwrt-packages ./package
           mv ./small ./package
-          cp -r ./openwrt/package/boot/arm-trusted-firmware-rk3328 ./package/boot          
+          cp -r ./openwrt/package/boot/arm-trusted-firmware-rk3328 ./package/boot
+          mv ./203-rk3288-voer.patch ./target/linux/rockchip/patches-5.10
           rm -rf lede
           rm -rf openwrt
       - name: Update feeds
