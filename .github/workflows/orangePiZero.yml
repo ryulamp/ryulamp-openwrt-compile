@@ -9,7 +9,7 @@ name: OpenWrt-orangePiZero
 
 on:
   schedule:
-    - cron: 10 13 * * *
+    - cron: 20 13 * * *
   release:
     types: [published]
 
@@ -47,6 +47,7 @@ jobs:
           mv ./openwrt-packages ./package
           mv ./small ./package
           mv ./203-ARM-dts-sun81-active-USB-expansion-on-Orange-Pi-Zero.patch ./target/linux/sunxi/patches-5.4
+          mv ./204-orangePi-zero-over.patch ./target/linux/sunxi/patches-5.4
       - name: Update feeds
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
