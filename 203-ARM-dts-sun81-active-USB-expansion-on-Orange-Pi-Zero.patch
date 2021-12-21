@@ -1,6 +1,6 @@
 --- a/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
 +++ b/arch/arm/boot/dts/sun8i-h2-plus-orangepi-zero.dts
-@@ -123,6 +101,14 @@
+@@ -123,6 +123,14 @@
  &ehci1 {
  	status = "okay";
  };
