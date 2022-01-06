@@ -1,0 +1,10 @@
+--- a/arch/arm64/boot/dts/rockchip/rk3328.dtsi
++++ b/arch/arm64/boot/dts/rockchip/rk3328.dtsi
+@@ -142,2 +142,7 @@
+		};
++        opp-1512000000 {
++            opp-hz = /bits/ 64 <1512000000>;
++            opp-microvolt = <1450000>;
++            clock-latency-ns = <40000>;
++        };
+	};
