@@ -9,7 +9,7 @@ name: OrangePi_R1_plus_LTS
 
 on:
   schedule:
-    - cron: 15 14 * * *
+    - cron: 55 1 * * *
   release:
     types: [published]
 
@@ -40,22 +40,15 @@ jobs:
           df -h
       - name: Download openwrt
         run: |
-          git clone https://github.com/orangepi-xunlong/openwrt.git
           git clone https://github.com/coolsnowwolf/lede
           git clone https://github.com/kenzok8/openwrt-packages.git
           git clone https://github.com/kenzok8/small.git
           mv ./lede/* ./
-          rm -rf ./target/linux/rockchip
-          cp -r ./openwrt/target/linux/rockchip ./target/linux
-          rm -rf ./package/boot/uboot-rockchip
-          cp -r ./openwrt/package/boot/uboot-rockchip ./package/boot
-          cp -r ./openwrt/configs .
           mv ./openwrt-packages ./package
           mv ./small ./package
-          cp -r ./openwrt/package/boot/arm-trusted-firmware-rk3328 ./package/boot
-          mv ./203-rk3288-voer.patch ./target/linux/rockchip/patches-5.10
+          mv ./203-rk3288-voer-5.10.patch ./target/linux/rockchip/patches-5.10
+          mv ./203-rk3288-voer-5.4.patch ./target/linux/rockchip/patches-5.4          
           rm -rf lede
-          rm -rf openwrt
       - name: Update feeds
         run: |
           sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
